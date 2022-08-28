@@ -1,10 +1,8 @@
-import random
+import secrets
 import pyperclip
 
-chars = "1234567890-_=+!@#$%^&*()[{]};:,<.>/?QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+password = "".join(secrets.token_urlsafe())
 
-length = 20
-
-password = "".join(random.sample(chars, length))
 pyperclip.copy(password)
+
 print(password)
